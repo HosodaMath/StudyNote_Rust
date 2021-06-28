@@ -1,10 +1,18 @@
 use::proconio::input;
 fn main() {
     input! {
-        n: usize,
-        data: [i64; n],
+        n: i64,
+        m: usize,
+        data: [i64; m],
     }
+    let mut sum = 0;
     for value in data {
-        println!("{}", value);
+        sum += value;
+    }
+    
+    if sum <= n {
+        println!("{}", n - sum);
+    } else {
+        println!("{}", -1);
     }
 }
